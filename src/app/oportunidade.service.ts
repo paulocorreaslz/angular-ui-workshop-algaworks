@@ -18,4 +18,7 @@ export class OportunidadeService {
     return this.httpClient.post(this.apiUrl, oportunidade);
   }
 
+  deletar(oportunidade: any) {
+    return this.httpClient.get(this.apiUrl+"/delete/"+oportunidade);
+  } 
 }
