@@ -54,42 +54,22 @@ export class PainelNegociacaoComponent implements OnInit {
   }
 
   deletar(id){
-    let retornoHttp = {
-      "headers":
-        {
-          "normalizedNames":{},
-          "lazyUpdate":null
-        },
-      "status":0,
-      "statusText":"",
-      "url":"",
-      "ok":false,
-      "name":"",
-      "message":"",
-      "error":{
-          "error":{},
-          "text":""
-      }
-    }
+    
     console.log('deletando:'+id);
     this.oportunidadeService.deletar(id)
-    .subscribe(() => {
-        
+    .subscribe(() => {  
         this.oportunidade = {};
         this.consultar();
-        
       },
       resposta => {
-        let resSTR = JSON.stringify(resposta);
-        retornoHttp = JSON.parse(resSTR);
         let msg = 'Erro inesperado. Tente novamente.';
         this.consultar();
-        console.log("Mensagem: "+retornoHttp.error.text);
-
+       
         if (resposta.error.message) {
           msg = resposta.error.message;
         } else {
-          msg = retornoHttp.error.text;
+          msg = resposta.error.text;
+          console.log(msg);
         }
 
         this.messageService.add({
