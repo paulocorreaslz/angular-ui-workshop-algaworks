@@ -52,5 +52,31 @@ export class PainelNegociacaoComponent implements OnInit {
         });
       });
   }
- 
+
+  deletar(id){
+
+    console.log('deletando:'+id);
+    this.oportunidadeService.deletar(id)
+    .subscribe(() => {        
+        this.oportunidade = {};
+        this.consultar();
+      },
+      resposta => {
+
+        let msg = 'Erro inesperado. Tente novamente.';
+        this.consultar();
+   
+        if (resposta.error.message) {
+          msg = resposta.error.message;
+        } else {
+          msg = "oportunidade apagada";
+        }
+
+        this.messageService.add({
+          severity: 'error',
+          summary: msg
+        });
+      });
+  }
+
 }
