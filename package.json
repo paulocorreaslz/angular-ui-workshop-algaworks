@@ -41,7 +41,7 @@
     "http-proxy": ">=1.18.1",
     "yargs-parser": ">=13.1.2",
     "node-forge": ">=0.10.0"
-  },
+    },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.1002.0",
     "@angular/cli": "^10.2.0",
