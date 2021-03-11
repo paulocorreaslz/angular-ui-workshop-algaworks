@@ -36,7 +36,7 @@
     "websocket-extensions": ">=0.1.4",
     "npm-registry-fetch": ">=4.0.5",
     "lodash": ">=4.17.19",
-    "elliptic": ">=6.5.3",
+    "elliptic": ">=6.5.4",
     "tree-kill": ">=1.2.2",
     "http-proxy": ">=1.18.1",
     "yargs-parser": ">=13.1.2",
