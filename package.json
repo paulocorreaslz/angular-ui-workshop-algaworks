@@ -28,7 +28,7 @@
     "kind-of": ">=6.0.3",
     "lodash": "^4.17.21",
     "minimist": ">=0.2.1",
-    "node-forge": ">=0.10.0",
+    "node-forge": ">=1.0.0",
     "npm-registry-fetch": ">=4.0.5",
     "primeflex": "^1.0.0-rc.1",
     "primeicons": "^1.0.0",
